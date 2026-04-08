@@ -1,0 +1,126 @@
+/* .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 97px;
+  width: 335px;
+  height: auto;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  width: 140px;
+  height: 213px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.bookBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2px;
+}
+
+.titleText {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.authorText {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  color: var(--gray);
+}
+
+.pageText {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-top: 4px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  width: 141px;
+  height: 42px;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-radius: 30px;
+  background: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-top: 20px;
+}
+
+.button:disabled,
+.button:disabled:hover {
+  background-color: rgb(207, 51, 51);
+  border-color: rgb(255, 255, 255);
+  color: var(--white);
+  cursor: not-allowed;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    padding: 50px;
+    width: 500px;
+  }
+
+  .image {
+    width: 153px;
+    height: 233px;
+  }
+
+  .bookBox {
+    max-width: 200px;
+  }
+
+  .titleText {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .authorText {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .button {
+    padding: 14px;
+    width: 162px;
+    height: 46px;
+    margin-top: 32px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .button:hover {
+    background-color: var(--white);
+    color: var(--black);
+  }
+} */

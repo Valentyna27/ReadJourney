@@ -1,0 +1,446 @@
+.readingBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.formBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.starPageText {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 8px;
+  margin-left: 14px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputContainer {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  background: var(--one-gray);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  pointer-events: none;
+  flex-shrink: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  color: var(--gray);
+  margin-right: 10px;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  color: #e90516;
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.input::placeholder {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.button {
+  padding: 10px;
+  width: 91px;
+  height: 38px;
+  background-color: transparent;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+
+.progressBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressTitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.progressText {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: var(--gray);
+}
+
+.imageBox {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--one-gray);
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.imageStar {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.myReadingTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 40px;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 137px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.bookCover {
+  width: 100%;
+  height: 208px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.bookTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.bookTitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.bookAuthor {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--gray);
+  margin-top: 5px;
+}
+
+.startBtn {
+  background: transparent;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: default;
+  margin-top: 20px;
+}
+
+.startIcon {
+  width: 30px;
+  height: 30px;
+  background-color: #e90516;
+  border-radius: 50%;
+}
+
+.stopIcon {
+  width: 15px;
+  height: 15px;
+  background-color: #e90516;
+  border-radius: 3px;
+}
+
+.diaryStatBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.diaryStatTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.diaryStatIconsBox {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.diaryStatIconsBox button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  color: var(--gray);
+}
+
+.diaryStatIconsBox button:hover {
+  transform: scale(1.1);
+  color: var(--white);
+}
+
+.diaryStatIconsBox button.active {
+  color: var(--white);
+}
+
+.diaryStatIconsBox svg {
+  fill: none;
+  stroke: currentColor;
+  transition: color 0.3s ease;
+}
+
+.diaryStatIconsBox button.active svg path {
+  opacity: 1 !important;
+  color: var(--white);
+}
+
+.button:disabled {
+  background-color: #3e3e3e;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media only screen and (min-width: 768px) {
+  .myReadingTitle {
+    margin-bottom: 32px;
+    font-size: 28px;
+    line-height: 1.14;
+  }
+
+  .bookInfo {
+    width: 317px;
+  }
+
+  .bookCover {
+    width: 169px;
+    height: 256px;
+    margin-bottom: 25px;
+  }
+
+  .bookTextBox {
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+
+  .bookTitle {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .bookAuthor {
+    font-size: 14px;
+    line-height: 1.28;
+    margin-top: 4px;
+  }
+
+  .startBtn {
+    width: 50px;
+    height: 50px;
+    margin-top: 16px;
+  }
+
+  .startIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stopIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .starPageText {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .inputContainer {
+    width: 295px;
+    height: 50px;
+    padding: 0 16px;
+  }
+
+  .label {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .input,
+  .input::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .errorMessage {
+    margin-left: 16px;
+  }
+
+  .button {
+    padding: 16px 0;
+    width: 166px;
+    height: 52px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .readingBlock {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .progressBox {
+    gap: 50px;
+  }
+
+  .progressTitle {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .imageBox {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 52px;
+  }
+
+  .imageStar {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .myReadingTitle {
+    margin-bottom: 44px;
+  }
+
+  .bookCover {
+    width: 224px;
+    height: 340px;
+  }
+
+  .bookTextBox {
+    margin-bottom: 25px;
+  }
+
+  .startBtn {
+    margin-top: 25px;
+  }
+
+  .startBtn:hover .iconStart {
+    scale: 1.15;
+  }
+
+  .readingBlock {
+    flex-direction: column;
+  }
+
+  .progressBox {
+    gap: 60px;
+  }
+
+  .imageBox {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 52px;
+  }
+
+  .imageStar {
+    width: 50px;
+    height: 50px;
+  }
+  .inputContainer {
+    width: 313px;
+  }
+
+  .inputContainer:hover,
+  .inputContainer:focus-within {
+    border: 1px solid rgba(249, 249, 249, 0.1);
+  }
+
+  .button:hover {
+    background-color: var(--white);
+    color: var(--black);
+  }
+}

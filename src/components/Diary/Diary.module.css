@@ -1,0 +1,304 @@
+.diaryBox {
+  max-width: 295px;
+  height: 211px;
+  background: var(--one-gray);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollContainer {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 5px;
+  margin-right: 15px;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background: rgb(41, 145, 37);
+  border-radius: 10px;
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 16px 0;
+}
+
+.diaryList {
+  padding: 16px;
+  padding-right: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.diaryItem {
+  position: relative;
+  padding-bottom: 17px;
+}
+
+.diaryItem::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--black);
+  z-index: 1;
+}
+
+.diaryItem:last-child::before {
+  bottom: 20px;
+}
+
+.dateBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  position: relative;
+  z-index: 2;
+}
+
+.leftPart {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.date,
+.noData,
+.pagesCount {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.todayDate,
+.noData {
+  color: var(--white);
+}
+
+.pastDate,
+.pagesCount {
+  color: var(--gray);
+}
+
+.pagesCount {
+  margin-right: 20px;
+}
+
+.todaySquare,
+.pastSquare {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  position: relative;
+  z-index: 3;
+}
+
+.todaySquare {
+  background: var(--white);
+}
+
+.pastSquare {
+  background-color: var(--gray);
+}
+
+.pastSquare .innerSquare {
+  background: var(--black);
+}
+
+.innerSquare {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 4px;
+  top: 4px;
+  background: var(--dark);
+  border-radius: 2px;
+}
+
+.statBox {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+.statBox:last-child {
+  margin-bottom: 0;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.percentText {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--white);
+}
+
+.timeText,
+.speedText {
+  font-size: 10px;
+  color: var(--gray);
+}
+
+.speedText {
+  width: 44px;
+  text-align: center;
+}
+
+.rightPart {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 4px;
+}
+
+.chartWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.speedChartIcon {
+  width: 43px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.chartGrow {
+  transform-origin: bottom;
+  animation: scaleUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.chartLine {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  animation: drawLine 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.4s;
+}
+
+.deleteBtn {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--gray);
+  padding: 0;
+  display: flex;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.deleteBtn:hover {
+  color: #e85050;
+  transform: scale(1.2);
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .diaryBox {
+    width: 321px;
+    height: 252px;
+  }
+
+  .todaySquare,
+  .pastSquare {
+    width: 20px;
+    height: 20px;
+  }
+
+  .innerSquare {
+    width: 12px;
+    height: 12px;
+  }
+
+  .statBox {
+    margin-left: 30px;
+  }
+
+  .diaryItem {
+    padding-bottom: 14px;
+  }
+
+  .diaryItem::before {
+    left: 9px;
+    top: 10px;
+  }
+
+  .date,
+  .pagesCount {
+    font-size: 16px;
+  }
+
+  .pagesCount {
+    margin-right: 22px;
+  }
+
+  .percentText {
+    font-size: 20px;
+  }
+
+  .timeText,
+  .speedText {
+    font-size: 12px;
+  }
+
+  .speedText {
+    width: 60px;
+  }
+
+  .speedChartIcon {
+    width: 59px;
+    height: 25px;
+  }
+
+  .deleteIcon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .diaryBox {
+    min-width: 313px;
+    height: 373px;
+  }
+
+  .diaryItem {
+    padding-bottom: 22px;
+  }
+
+  .statBox {
+    margin-bottom: 28px;
+  }
+}

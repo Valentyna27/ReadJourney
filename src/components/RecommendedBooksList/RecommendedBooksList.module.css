@@ -1,0 +1,159 @@
+.defaultCoverBox {
+  width: 137px;
+  height: 208px;
+  background: #262626;
+  position: relative;
+  border-radius: 8px;
+}
+
+.defaultCover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 112px;
+}
+
+.booksList {
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+}
+
+.bookItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: fit-content;
+  width: 137px;
+}
+
+.bookCover {
+  width: 137px;
+  height: 208px;
+  border-radius: 8px;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bookTitle {
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.bookAuthor {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--gray);
+}
+
+.deleteBtn {
+  background: transparent;
+  border: none;
+}
+
+.iconDeleteBox {
+  width: 28px;
+  height: 28px;
+  background: rgba(232, 80, 80, 0.1);
+  border: 1px solid rgba(232, 80, 80, 0.2);
+  border-radius: 50%;
+  position: relative;
+}
+
+.iconDelete {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e85050;
+}
+
+@media only screen and (min-width: 768px) {
+  .defaultCoverBox {
+    width: 137px;
+    height: 208px;
+    background: #262626;
+    position: relative;
+  }
+
+  .defaultCover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 112px;
+  }
+
+  .booksList {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 27px;
+  }
+
+  .bookTitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.28;
+    letter-spacing: -0.02em;
+    color: var(--white);
+  }
+
+  .bookAuthor {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--gray);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+
+  .booksList {
+    column-gap: 20px;
+  }
+
+  .bookItem {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .bookItem:hover {
+    transform: scale(1.1);
+  }
+
+  .deleteBtn:hover .iconDeleteBox {
+    background: rgba(5, 211, 63, 0.1);
+    border: 1px solid rgba(17, 219, 31, 0.2);
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .deleteBtn:hover .iconDelete {
+    color: rgb(30, 189, 15);
+  }
+}

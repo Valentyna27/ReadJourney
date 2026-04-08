@@ -1,0 +1,85 @@
+.fieldWrapper {
+  position: relative;
+}
+
+.inputContainer {
+  position: relative;
+  width: 295px;
+  height: 44px;
+  padding: 0 14px;
+  background: var(--one-gray);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  pointer-events: none;
+  flex-shrink: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  color: var(--gray);
+  margin-right: 10px;
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.input::placeholder {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  color: #4c4848;
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  font-size: 12px;
+  color: #e90516;
+}
+
+@media only screen and (min-width: 768px) {
+  .inputContainer {
+    width: 472px;
+    height: 50px;
+    padding: 0 16px;
+  }
+
+  .label {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .input,
+  .input::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .errorMessage,
+  .successMessage {
+    margin-left: 16px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .inputContainer:hover,
+  .inputContainer:focus-within {
+    border: 1px solid rgba(249, 249, 249, 0.1);
+  }
+}

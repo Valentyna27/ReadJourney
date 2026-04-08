@@ -1,0 +1,13 @@
+.text,
+.spanText {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: var(--gray);
+}
+
+.spanText {
+  color: var(--white);
+}
