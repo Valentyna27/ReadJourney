@@ -1,16 +1,18 @@
-# React + Vite
+ReadJourney:
+ReadJourney is a comprehensive web application designed for readers who want to track their reading progress. It allows users to build a personal library, monitor reading sessions in real-time, maintain a detailed reading diary, and visualize their achievements through dynamic statistics.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ Key Features:
+-  Add and manage books with details such as title, author, and total page count.
+-  Start and stop live reading sessions to track time spent on each book.
+-  Visualize your overall progress with interactive circular charts that update as you read.
+- A chronological history of all reading sessions, including date, pages read, reading speed, and duration.
+-  Easily delete sessions or adjust your history to keep your statistics accurate.
 
-Currently, two official plugins are available:
+ Tech Stack:
+-  React.js
+-  Redux Toolkit
+- CSS Modules 
+- React Router
+- Axios
+- Git & GitHub
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
